@@ -54,6 +54,8 @@ tasks.withType(Test).configureEach {
     }
 }
 
-compileTestJava {
-    options.encoding = 'UTF-8'
+compileJava.options.encoding = 'windows-1251'
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'windows-1251'
 }
