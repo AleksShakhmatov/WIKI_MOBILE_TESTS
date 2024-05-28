@@ -56,7 +56,7 @@ clean test
 
 Для запуска сборки необходимо перейти в раздел **"Build with Parameters"** и нажать кнопку **"Build"**.
 <p align="center">
-<img title="Jenkins Build" src="media/screenshots/JenkinsBuild.png"> 
+<img title="Jenkins Build" src="media/screenshots/Jenkins_Build.png"> 
 </p>
 
 После выполнения сборки, в блоке **Build History** напротив номера сборки появятся значки <img src="media\logo\Allure_TestOps.svg" width="15" height="15">
