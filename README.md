@@ -7,15 +7,15 @@
 
 ## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/yellow-computer-folder.png"> Содержание:
 
-- <a href="#tools"> Используемые инструменты</a>
-- <a href="#cases"> Тест-кейсы</a>
+- <a href="#tools">  Используемый стек технологий и инструментов</a>
+- <a href="#cases"> Реализованные проверки</a>
 - <a href="#autotests"> Запуск автотестов</a>
 - <a href="#jenkins"> Сборка в Jenkins</a>
-- <a href="#allureReport"> Пример Allure-отчета</a>
+- <a href="#allureReport"> Интеграция Allure-отчета</a>
 - <a href="#allure"> Интеграция с Allure TestOps</a>
 - <a href="#jira"> Интеграция с Jira</a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота</a>
-- <a href="#video"> Видео примера запуска тестов в Browserstack</a>
+- <a href="#video"> Видео отчет запуска тестов в Browserstack</a>
 
 <a id="stech"></a>
 ## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/programm.jpg"> Используемый стек технологий и инструментов
@@ -27,12 +27,9 @@
 
 <a id="chek"></a>
 ##  <img width="40" height="40" style="vertical-align:middle" title="List" src="media/images/todo.png"> Реализованные проверки
-- Проверка открытия нужного сайта
-- Проверка языка сайта
-- Проверка контактов одного из филиалов компании
-- Проверка гамбургер-меню сайта
-- Проверка наличия строки поиска
-- Проверка наличия адресов социальных сетей
+- Проверка обнаружения результатов поиска
+- Поиск нужного определения
+- Проверка наличия заголовка в новостях
 
 <a id="engine"></a>
 ## <img height="40" src="media/images/play.jpg" title="Play" width="40"/> Запуск автотестов
@@ -117,7 +114,7 @@ clean test
 <img title="Jira Task" src="media/screenshots/Jira.png">
 </p>
 
-## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram через бота
+## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 
 <a id="telegram"></a>
@@ -127,7 +124,7 @@ clean test
 
 
 <a id="video"></a>
-## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов (Selenoid)
+## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов в Browserstack
 
 <p align="center">
   <img title="Selenoid Video" src="media/gifs/WIKI.gif">
