@@ -122,7 +122,7 @@ clean test
 
 <a id="telegram"></a>
 <p align="center">
-<img title="Telegram Notifications" src="media/screenshots/Notifiacations.png">
+<img title="Telegram Notifications" src="media/screenshots/Notifications.png">
 </p>
 
 
@@ -130,5 +130,5 @@ clean test
 ## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов (Selenoid)
 
 <p align="center">
-  <img title="Selenoid Video" src="media/gifs/IBS.gif">
+  <img title="Selenoid Video" src="media/gifs/WIKI.gif">
 </p>
