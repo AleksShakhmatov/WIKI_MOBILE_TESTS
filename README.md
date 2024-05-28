@@ -1,24 +1,24 @@
-# Проект по мобильной автоматизации тестовых сценариев для сайта Wikipedia
+# РџСЂРѕРµРєС‚ РїРѕ РјРѕР±РёР»СЊРЅРѕР№ Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё С‚РµСЃС‚РѕРІС‹С… СЃС†РµРЅР°СЂРёРµРІ РґР»СЏ СЃР°Р№С‚Р° Wikipedia
 
-Тесты в проекте написаны на языке <code>Java</code> с использованием фреймворка  [Selenide](https://selenide.org/) и сборщика <code>Gradle</code>. <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
-При прогоне тестов для удалённого запуска браузеров используется [Selenoid](https://aerokube.com/selenoid/).
-Для удаленного запуска реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота. Также реализована интеграция с <code>Allure TestOps</code> и <code>Jira</code>.
+РўРµСЃС‚С‹ РІ РїСЂРѕРµРєС‚Рµ РЅР°РїРёСЃР°РЅС‹ РЅР° СЏР·С‹РєРµ <code>Java</code> СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј С„СЂРµР№РјРІРѕСЂРєР°  [Selenide](https://selenide.org/) Рё СЃР±РѕСЂС‰РёРєР° <code>Gradle</code>. <code>JUnit 5</code> Р·Р°РґРµР№СЃС‚РІРѕРІР°РЅ РІ РєР°С‡РµСЃС‚РІРµ С„СЂРµР№РјРІРѕСЂРєР° РјРѕРґСѓР»СЊРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ.
+РџСЂРё РїСЂРѕРіРѕРЅРµ С‚РµСЃС‚РѕРІ РґР»СЏ СѓРґР°Р»С‘РЅРЅРѕРіРѕ Р·Р°РїСѓСЃРєР° Р±СЂР°СѓР·РµСЂРѕРІ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ [Selenoid](https://aerokube.com/selenoid/).
+Р”Р»СЏ СѓРґР°Р»РµРЅРЅРѕРіРѕ Р·Р°РїСѓСЃРєР° СЂРµР°Р»РёР·РѕРІР°РЅР° СЃР±РѕСЂРєР° РІ <code>Jenkins</code> СЃ С„РѕСЂРјРёСЂРѕРІР°РЅРёРµРј Allure-РѕС‚С‡РµС‚Р° Рё РѕС‚РїСЂР°РІРєРѕР№ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РІ <code>Telegram</code> РїСЂРё РїРѕРјРѕС‰Рё Р±РѕС‚Р°. РўР°РєР¶Рµ СЂРµР°Р»РёР·РѕРІР°РЅР° РёРЅС‚РµРіСЂР°С†РёСЏ СЃ <code>Allure TestOps</code> Рё <code>Jira</code>.
 
 
-## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/yellow-computer-folder.png"> Содержание:
+## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/yellow-computer-folder.png"> РЎРѕРґРµСЂР¶Р°РЅРёРµ:
 
-- <a href="#tools"> Используемые инструменты</a>
-- <a href="#cases"> Тест-кейсы</a>
-- <a href="#autotests"> Запуск автотестов</a>
-- <a href="#jenkins"> Сборка в Jenkins</a>
-- <a href="#allureReport"> Пример Allure-отчета</a>
-- <a href="#allure"> Интеграция с Allure TestOps</a>
-- <a href="#jira"> Интеграция с Jira</a>
-- <a href="#tg"> Уведомления в Telegram с использованием бота</a>
-- <a href="#video"> Видео примера запуска тестов в Browserstack</a>
+- <a href="#tools"> РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹</a>
+- <a href="#cases"> РўРµСЃС‚-РєРµР№СЃС‹</a>
+- <a href="#autotests"> Р—Р°РїСѓСЃРє Р°РІС‚РѕС‚РµСЃС‚РѕРІ</a>
+- <a href="#jenkins"> РЎР±РѕСЂРєР° РІ Jenkins</a>
+- <a href="#allureReport"> РџСЂРёРјРµСЂ Allure-РѕС‚С‡РµС‚Р°</a>
+- <a href="#allure"> РРЅС‚РµРіСЂР°С†РёСЏ СЃ Allure TestOps</a>
+- <a href="#jira"> РРЅС‚РµРіСЂР°С†РёСЏ СЃ Jira</a>
+- <a href="#tg"> РЈРІРµРґРѕРјР»РµРЅРёСЏ РІ Telegram СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј Р±РѕС‚Р°</a>
+- <a href="#video"> Р’РёРґРµРѕ РїСЂРёРјРµСЂР° Р·Р°РїСѓСЃРєР° С‚РµСЃС‚РѕРІ РІ Browserstack</a>
 
 <a id="stech"></a>
-## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/programm.jpg"> Используемый стек технологий и инструментов
+## <img width="40" height="40" style="vertical-align:middle" title="Folder" src="media/images/programm.jpg"> РСЃРїРѕР»СЊР·СѓРµРјС‹Р№ СЃС‚РµРє С‚РµС…РЅРѕР»РѕРіРёР№ Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ
 
 | Java                                                    | IntelliJ  <br>  Idea                                            | GitHub                                                    | JUnit 5                                                   | Gradle                                                    | Selenide                                                    | Selenoid                                                    | Allure<br/>Report                                                | Allure <br> TestOps                                               | Jenkins                                                    | Jira                                                    |                                                    Telegram |
 |:--------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------|-------------------------------------------------------------------|------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------:|
@@ -26,53 +26,53 @@
 
 
 <a id="chek"></a>
-##  <img width="40" height="40" style="vertical-align:middle" title="List" src="media/images/todo.png"> Реализованные проверки
-- Проверка открытия нужного сайта
-- Проверка языка сайта
-- Проверка контактов одного из филиалов компании
-- Проверка гамбургер-меню сайта
-- Проверка наличия строки поиска
-- Проверка наличия адресов социальных сетей
+##  <img width="40" height="40" style="vertical-align:middle" title="List" src="media/images/todo.png"> Р РµР°Р»РёР·РѕРІР°РЅРЅС‹Рµ РїСЂРѕРІРµСЂРєРё
+- РџСЂРѕРІРµСЂРєР° РѕС‚РєСЂС‹С‚РёСЏ РЅСѓР¶РЅРѕРіРѕ СЃР°Р№С‚Р°
+- РџСЂРѕРІРµСЂРєР° СЏР·С‹РєР° СЃР°Р№С‚Р°
+- РџСЂРѕРІРµСЂРєР° РєРѕРЅС‚Р°РєС‚РѕРІ РѕРґРЅРѕРіРѕ РёР· С„РёР»РёР°Р»РѕРІ РєРѕРјРїР°РЅРёРё
+- РџСЂРѕРІРµСЂРєР° РіР°РјР±СѓСЂРіРµСЂ-РјРµРЅСЋ СЃР°Р№С‚Р°
+- РџСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ СЃС‚СЂРѕРєРё РїРѕРёСЃРєР°
+- РџСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ Р°РґСЂРµСЃРѕРІ СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚РµР№
 
 <a id="engine"></a>
-## <img height="40" src="media/images/play.jpg" title="Play" width="40"/> Запуск автотестов
+## <img height="40" src="media/images/play.jpg" title="Play" width="40"/> Р—Р°РїСѓСЃРє Р°РІС‚РѕС‚РµСЃС‚РѕРІ
 
 
-### Запуск тестов из терминала локально:
+### Р—Р°РїСѓСЃРє С‚РµСЃС‚РѕРІ РёР· С‚РµСЂРјРёРЅР°Р»Р° Р»РѕРєР°Р»СЊРЅРѕ:
 ```
 gradle clean test 
 ```
-### Запуск тестов из терминала удаленно (Selenoid):
+### Р—Р°РїСѓСЃРє С‚РµСЃС‚РѕРІ РёР· С‚РµСЂРјРёРЅР°Р»Р° СѓРґР°Р»РµРЅРЅРѕ (Selenoid):
 ```      
 gradle clean test -Denv=main
 ```
-### Запуск тестов в Jenkins:
+### Р—Р°РїСѓСЃРє С‚РµСЃС‚РѕРІ РІ Jenkins:
 ```   
 clean test
 ```
 
 <a id="build"></a>
-## <img width="40" height="40" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins
+## <img width="40" height="40" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> РЎР±РѕСЂРєР° РІ Jenkins
 
-Для запуска сборки необходимо перейти в раздел **"Build with Parameters"** и нажать кнопку **"Build"**.
+Р”Р»СЏ Р·Р°РїСѓСЃРєР° СЃР±РѕСЂРєРё РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµР№С‚Рё РІ СЂР°Р·РґРµР» **"Build with Parameters"** Рё РЅР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ **"Build"**.
 <p align="center">
 <img title="Jenkins Build" src="media/screenshots/JenkinsBuild.png"> 
 </p>
 
-После выполнения сборки, в блоке **Build History** напротив номера сборки появятся значки <img src="media\logo\Allure_TestOps.svg" width="15" height="15">
-и <img src="media\logo\Allure_Report.svg" width="15" height="15"> , при клике на которые откроются соответствующие
-артефакты.
+РџРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЃР±РѕСЂРєРё, РІ Р±Р»РѕРєРµ **Build History** РЅР°РїСЂРѕС‚РёРІ РЅРѕРјРµСЂР° СЃР±РѕСЂРєРё РїРѕСЏРІСЏС‚СЃСЏ Р·РЅР°С‡РєРё <img src="media\logo\Allure_TestOps.svg" width="15" height="15">
+Рё <img src="media\logo\Allure_Report.svg" width="15" height="15"> , РїСЂРё РєР»РёРєРµ РЅР° РєРѕС‚РѕСЂС‹Рµ РѕС‚РєСЂРѕСЋС‚СЃСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ
+Р°СЂС‚РµС„Р°РєС‚С‹.
 
-## <img width="40" height="40" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Интеграция с Allure
+## <img width="40" height="40" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> РРЅС‚РµРіСЂР°С†РёСЏ СЃ Allure
 
 <a id="report"></a>
-### Allure отчет
+### Allure РѕС‚С‡РµС‚
 
 <p align="center">   
 <img title="Jenkins Build" src="media/screenshots/Allure_Report1.png">    
 </p>
 
-### Подробнее
+### РџРѕРґСЂРѕР±РЅРµРµ
 <p align="center">     
 <img title="Jenkins Build" src="media/screenshots/Allure_Report2.png">    
 </p>       
@@ -85,11 +85,11 @@ clean test
 <img title="Jenkins Build" src="media/screenshots/Allure_Report4.png">    
 </p>  
 
-## <img width="40" height="40" style="vertical-align:middle" title="Allure TestOps" src="media/logo/Allure_TestOps.svg"> Интеграция с Allure TestOps
+## <img width="40" height="40" style="vertical-align:middle" title="Allure TestOps" src="media/logo/Allure_TestOps.svg"> РРЅС‚РµРіСЂР°С†РёСЏ СЃ Allure TestOps
 
 
 <a id="testops"></a>
-### Allure TestOps отчет
+### Allure TestOps РѕС‚С‡РµС‚
 
 #### Overview
 
@@ -102,7 +102,7 @@ clean test
 <img title="Allure TestOps DashBoards" src="media/screenshots/Allure_TestOps2.png">
 </p>
 
-#### Подробнее
+#### РџРѕРґСЂРѕР±РЅРµРµ
 
 <p align="center">
 <img title="Test Results in Alure TestOps" src="media/screenshots/Allure_TestOps3.png">
@@ -110,14 +110,14 @@ clean test
 
 
 <a id="jira"></a>
-## <img width="40" height="40" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
+## <img width="40" height="40" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> РРЅС‚РµРіСЂР°С†РёСЏ СЃ Jira
 
 
 <p align="center">
 <img title="Jira Task" src="media/screenshots/Jira.png">
 </p>
 
-## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram через бота
+## <img width="40" height="40" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> РЈРІРµРґРѕРјР»РµРЅРёСЏ РІ Telegram С‡РµСЂРµР· Р±РѕС‚Р°
 
 
 <a id="telegram"></a>
@@ -127,7 +127,7 @@ clean test
 
 
 <a id="video"></a>
-## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео отчет запуска тестов (Selenoid)
+## <img width="40" height="40" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Р’РёРґРµРѕ РѕС‚С‡РµС‚ Р·Р°РїСѓСЃРєР° С‚РµСЃС‚РѕРІ (Selenoid)
 
 <p align="center">
   <img title="Selenoid Video" src="media/gifs/IBS.gif">
